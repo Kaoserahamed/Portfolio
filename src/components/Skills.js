@@ -4,33 +4,38 @@ const Skills = () => {
   const skillCategories = [
     {
       title: 'Languages',
-      skills: ['C', 'C++', 'Java', 'Kotlin', 'Python', 'JavaScript'],
+      skills: ['C', 'C++', 'Java', 'Python', 'JavaScript'],
       color: 'blue',
     },
     {
       title: 'Frontend',
-      skills: ['React', 'HTML5', 'CSS3', 'Tailwind CSS'],
+      skills: ['HTML5', 'CSS3', 'React', 'Next.js', 'Bootstrap', 'Tailwind CSS'],
       color: 'purple',
     },
     {
       title: 'Backend',
-      skills: ['Node.js', 'Express.js', 'REST API Design'],
+      skills: ['Node.js', 'Express.js', 'Spring Boot'],
       color: 'green',
     },
     {
       title: 'Mobile',
-      skills: ['Kotlin', 'Jetpack Compose', 'Android SDK'],
+      skills: ['Jetpack Compose', 'Kotlin', 'React Native'],
       color: 'orange',
     },
     {
       title: 'Databases',
-      skills: ['MySQL', 'MongoDB', 'Firebase Firestore'],
+      skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis'],
       color: 'red',
     },
     {
-      title: 'Tools & Cloud',
-      skills: ['Git', 'GitHub', 'Postman', 'AWS'],
+      title: 'Cloud & DevOps',
+      skills: ['AWS', 'Docker', 'CI/CD', 'GitHub Actions'],
       color: 'indigo',
+    },
+    {
+      title: 'Tools & APIs',
+      skills: ['Git', 'GitHub', 'Postman', 'RESTful APIs'],
+      color: 'blue',
     },
   ];
 
