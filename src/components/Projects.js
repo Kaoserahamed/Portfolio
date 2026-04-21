@@ -3,11 +3,20 @@ import ProjectDetail from './ProjectDetail';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('all');
 
-  const projects = [
+  const categories = [
+    { id: 'all', name: 'All Projects', icon: '🚀' },
+    { id: 'ai-ml', name: 'AI/ML & Research', icon: '🤖' },
+    { id: 'web', name: 'Web Applications', icon: '🌐' },
+    { id: 'mobile', name: 'Mobile Apps', icon: '📱' },
+  ];
+
+  const allProjects = [
     {
       title: 'Invasive Alien Plants Classification',
       year: '2025',
+      category: 'ai-ml',
       subtitle: 'Deep Learning for Ecological Conservation',
       description: 'Research project for ICCIT 2025 conference focusing on automated classification of invasive plant species using state-of-the-art deep learning models.',
       fullDescription: 'This research addresses the ecological threat of invasive alien plants in Bangladesh through deep learning. A dataset of 8,452 images representing 11 invasive species was collected from diverse ecological sites across the Sylhet region. The study demonstrates that YOLOv11x achieves 98.41% classification accuracy, enabling reliable identification for early detection and mitigation efforts.',
@@ -51,6 +60,7 @@ const Projects = () => {
     {
       title: 'Smart Traffic Management System',
       year: '2024',
+      category: 'ai-ml',
       subtitle: 'AI-Powered Traffic Light Control with Reinforcement Learning',
       description: 'An intelligent traffic light control system using Proximal Policy Optimization (PPO) reinforcement learning to optimize traffic flow at intersections and reduce congestion.',
       fullDescription: 'This project implements an AI-powered traffic light controller that learns optimal signal timing strategies through reinforcement learning. Unlike traditional fixed-time controllers, the system adapts to real-time traffic conditions using PPO algorithm with actor-critic architecture, achieving 30-50% reduction in average waiting time.',
@@ -94,6 +104,7 @@ const Projects = () => {
     {
       title: 'Task – Travel & Adventure Platform',
       year: '2025',
+      category: 'web',
       subtitle: 'Marketplace Connecting Travelers with Tour Companies',
       description: 'A comprehensive web-based travel platform that connects adventure lovers with multiple tour companies, offering personalized AI-based recommendations and seamless booking experiences.',
       fullDescription: 'Task is a travel marketplace designed to simplify trip planning by aggregating tour packages from multiple companies in one place. Users can explore destinations, compare packages, receive AI-powered recommendations, and book trips directly. The platform serves travelers, tour companies, and administrators with role-specific features and real-time communication.',
@@ -137,6 +148,7 @@ const Projects = () => {
     {
       title: 'E-Commerce & Food Delivery Platforms',
       year: '2025',
+      category: 'web',
       description: 'Full-stack e-commerce and food delivery applications with complete order management systems.',
       technologies: ['React', 'Node.js', 'MongoDB', 'REST API'],
       highlights: [
@@ -150,6 +162,7 @@ const Projects = () => {
     {
       title: 'API Hub - API Catalog & Mocking Platform',
       year: '2026',
+      category: 'web',
       description: 'Platform for API discovery, documentation, and mock response generation using OpenAPI specifications.',
       technologies: ['Spring Boot', 'React', 'OpenAPI', 'Java'],
       highlights: [
@@ -163,6 +176,7 @@ const Projects = () => {
     {
       title: 'Meal Manager (Android)',
       year: '2024',
+      category: 'mobile',
       description: 'Modern Android application for managing shared meal expenses in hostels and shared apartments. Built with Jetpack Compose and MVVM architecture, featuring real-time synchronization across devices.',
       technologies: ['Kotlin', 'Jetpack Compose', 'Firebase', 'MVVM', 'Material Design 3'],
       highlights: [
@@ -179,6 +193,7 @@ const Projects = () => {
     {
       title: 'Dots and Boxes Game',
       year: '2023',
+      category: 'web',
       description: 'Classic multiplayer game implementation with intuitive GUI and game logic.',
       technologies: ['Java', 'Swing', 'Game Development'],
       highlights: [
@@ -191,18 +206,57 @@ const Projects = () => {
     },
   ];
 
+  // Filter projects based on active category
+  const filteredProjects = activeCategory === 'all' 
+    ? allProjects 
+    : allProjects.filter(project => project.category === activeCategory);
+
+  // Count projects by category
+  const projectCounts = {
+    all: allProjects.length,
+    'ai-ml': allProjects.filter(p => p.category === 'ai-ml').length,
+    web: allProjects.filter(p => p.category === 'web').length,
+    mobile: allProjects.filter(p => p.category === 'mobile').length,
+  };
+
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
           Featured Projects
         </h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
           A showcase of my technical expertise and problem-solving abilities
         </p>
 
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${
+                activeCategory === category.id
+                  ? 'bg-primary text-white shadow-lg scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
+              }`}
+            >
+              <span className="text-xl">{category.icon}</span>
+              <span>{category.name}</span>
+              <span className={`text-sm px-2 py-0.5 rounded-full ${
+                activeCategory === category.id
+                  ? 'bg-white bg-opacity-30'
+                  : 'bg-gray-200'
+              }`}>
+                {projectCounts[category.id]}
+              </span>
+            </button>
+          ))}
+        </div>
+
+        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <div
               key={index}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
