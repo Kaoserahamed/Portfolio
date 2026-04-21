@@ -40,7 +40,7 @@ const Header = ({ activeSection, setActiveSection }) => {
       <nav className="container mx-auto px-4 flex justify-between items-center">
         <div className="text-2xl font-bold text-primary">
           <span className="text-gray-800">Kaoser</span>
-          <span className="text-primary">Anik</span>
+          <span className="text-primary">Ahamed</span>
         </div>
 
         {/* Desktop Menu */}
