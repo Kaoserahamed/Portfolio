@@ -1,19 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ProjectDetail from './ProjectDetail';
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const projects = [
     {
       title: 'Invasive Alien Plants Classification',
       year: '2025',
-      description: 'Research project for ICCIT 2025 conference focusing on image classification of invasive plant species using Convolutional Neural Networks.',
-      technologies: ['Python', 'TensorFlow', 'CNN', 'Image Processing'],
+      subtitle: 'Deep Learning for Ecological Conservation',
+      description: 'Research project for ICCIT 2025 conference focusing on automated classification of invasive plant species using state-of-the-art deep learning models.',
+      fullDescription: 'This research addresses the ecological threat of invasive alien plants in Bangladesh through deep learning. A dataset of 8,452 images representing 11 invasive species was collected from diverse ecological sites across the Sylhet region. The study demonstrates that YOLOv11x achieves 98.41% classification accuracy, enabling reliable identification for early detection and mitigation efforts.',
+      technologies: ['Python', 'TensorFlow', 'YOLOv11x', 'CNN', 'Vision Transformer', 'ResNet50'],
       highlights: [
-        'Implemented CNN architecture for plant species classification',
-        'Performed data preprocessing and augmentation',
-        'Achieved high accuracy in identifying invasive species',
+        'Created novel dataset of 8,452 images across 11 invasive species',
+        'Achieved 98.41% accuracy using YOLOv11x architecture',
+        'Compared 5 deep learning models (ResNet50, Custom CNN, ViT, YOLOv8x, YOLOv11x)',
+        'Collected data from diverse ecological regions in Sylhet, Bangladesh',
+        'Implemented comprehensive preprocessing and data augmentation',
+        'Optimized hyperparameters using Optuna framework',
+      ],
+      technicalDetails: [
+        {
+          title: 'Dataset',
+          content: '8,452 labeled images from 11 species including Acacia auriculiformis, Ageratum conyzoides, Mikania micrantha, and others. Images captured with varying lighting, angles, and backgrounds from Jaflong, Ratargul Swamp Forest, and SUST campus.',
+        },
+        {
+          title: 'Model Architecture',
+          content: 'YOLOv11x with enhanced backbone design and improved feature aggregation. Training performed on NVIDIA Tesla T4 GPU with Adam optimizer, batch sizes 16-32, and 100 epochs.',
+        },
+        {
+          title: 'Performance Metrics',
+          content: 'YOLOv11x: 98.41% accuracy, 98.58% precision, 97.05% recall. Vision Transformer: 98.26% accuracy. ResNet50: 97.11% accuracy. All models achieved F1-scores above 96.9%.',
+        },
+      ],
+      results: [
+        { value: '98.41%', label: 'Best Accuracy' },
+        { value: '8,452', label: 'Images' },
+        { value: '11', label: 'Species' },
+      ],
+      authors: [
+        { name: 'S. S. Mahmud Turza', affiliation: 'CSE, SUST' },
+        { name: 'MD. Kaoser Ahamed Anik', affiliation: 'CSE, SUST' },
+        { name: 'Mohammad Shahidur Rahman', affiliation: 'CSE, SUST' },
       ],
       color: 'from-green-500 to-emerald-600',
       github: null,
+      paper: null, // Add link when available
     },
     {
       title: 'Multi-Tour Booking Platform',
@@ -99,7 +132,8 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+              onClick={() => setSelectedProject(project)}
             >
               <div className={`bg-gradient-to-r ${project.color} p-6 text-white`}>
                 <div className="flex justify-between items-start mb-2">
@@ -118,7 +152,7 @@ const Projects = () => {
                 <div className="mb-4">
                   <h4 className="font-semibold text-gray-800 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
-                    {project.highlights.map((highlight, idx) => (
+                    {project.highlights.slice(0, 3).map((highlight, idx) => (
                       <li key={idx} className="text-sm text-gray-600 flex items-start">
                         <svg
                           className="w-4 h-4 text-primary mr-2 flex-shrink-0 mt-0.5"
@@ -137,10 +171,15 @@ const Projects = () => {
                       </li>
                     ))}
                   </ul>
+                  {project.highlights.length > 3 && (
+                    <p className="text-sm text-primary mt-2 font-semibold">
+                      +{project.highlights.length - 3} more features
+                    </p>
+                  )}
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, idx) => (
+                  {project.technologies.slice(0, 4).map((tech, idx) => (
                     <span
                       key={idx}
                       className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium"
@@ -148,26 +187,47 @@ const Projects = () => {
                       {tech}
                     </span>
                   ))}
+                  {project.technologies.length > 4 && (
+                    <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">
+                      +{project.technologies.length - 4}
+                    </span>
+                  )}
                 </div>
 
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-primary hover:text-secondary font-semibold text-sm transition-colors"
+                <div className="flex items-center justify-between">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedProject(project);
+                    }}
+                    className="text-primary hover:text-secondary font-semibold text-sm transition-colors"
                   >
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                    </svg>
-                    View on GitHub
-                  </a>
-                )}
+                    View Details →
+                  </button>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-gray-600 hover:text-primary transition-colors"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                      </svg>
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Project Detail Modal */}
+      {selectedProject && (
+        <ProjectDetail project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
     </section>
   );
 };
