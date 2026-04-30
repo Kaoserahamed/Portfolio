@@ -19,6 +19,7 @@ const Header = ({ activeSection, setActiveSection }) => {
     { name: 'Experience', id: 'experience' },
     { name: 'Projects', id: 'projects' },
     { name: 'Education', id: 'education' },
+    { name: 'Certificates', id: 'certificates' },
     { name: 'Contact', id: 'contact' },
   ];
 
