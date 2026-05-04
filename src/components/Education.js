@@ -17,7 +17,7 @@ const Education = () => {
       location: 'Gazipur, Bangladesh',
       period: '2018 – 2020',
       gpa: '5.0/5.0',
-      description: 'Achieved perfect GPA with focus on Science subjects. Built strong foundation in Mathematics and Physics.',
+      description: '',
       color: 'from-purple-500 to-pink-600',
     },
   ];

@@ -13,7 +13,7 @@ const About = () => {
               I'm a Computer Science student at <span className="font-semibold text-primary">Shahjalal University of Science and Technology</span> with a strong passion for building innovative web applications and solving complex problems.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              With a <span className="font-semibold">GPA of 3.65/4.0</span>, I've developed expertise in Full-Stack Development, specializing in the MERN stack (MongoDB, Express.js, React, Node.js). I've successfully built multiple production-ready applications including tour booking platforms, e-commerce systems, and mobile applications.
+              With a <span className="font-semibold">GPA of 3.65/4.0</span>, I've developed expertise in Full-Stack Development, specializing in the MERN stack (MongoDB, Express.js, React, Node.js). I've successfully built multiple applications including tour booking platforms, e-commerce systems, and mobile applications.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               As a competitive programmer, I've solved <span className="font-semibold text-primary">700+ problems</span> across platforms like Codeforces, LeetCode, and GeeksforGeeks, which has strengthened my problem-solving abilities and algorithmic thinking.
