@@ -102,6 +102,51 @@ const Projects = () => {
       github: 'https://github.com/Kaoserahamed/Smart_Traffic_Management_System',
     },
     {
+      title: 'Bangladesh News Aggregator 🇧🇩',
+      year: '2024',
+      category: 'web',
+      subtitle: 'Automated News Collection & Intelligent Processing',
+      description: 'A full-stack automated news aggregation system that collects, processes, and presents news from reliable Bangladesh sources with intelligent duplicate detection and automatic categorization.',
+      fullDescription: 'Bangladesh News Aggregator is a comprehensive news platform featuring automated daily updates via Vercel cron jobs, intelligent duplicate detection with 90% accuracy using Levenshtein distance algorithm, and smart categorization for Bangladesh-specific content. The bilingual interface supports both Bangla and English with dark mode and responsive design.',
+      technologies: ['Next.js 14', 'React 18', 'TypeScript', 'MongoDB Atlas', 'Tailwind CSS', 'Node.js'],
+      highlights: [
+        'Automated daily news collection via Vercel cron jobs',
+        '90% accuracy duplicate detection using Levenshtein distance algorithm',
+        'Smart categorization with Bangladesh-specific keywords',
+        'Bilingual support (Bangla & English) with responsive UI',
+        'Dark mode with persistent user preference',
+        'REST API with pagination and category filtering',
+        'MongoDB Atlas cloud database with optimized indexes',
+        'Health monitoring and automated content processing',
+      ],
+      technicalDetails: [
+        {
+          title: 'Automation & Processing',
+          content: 'Daily automated news collection using Vercel cron jobs. Intelligent duplicate detection with 90% accuracy using Levenshtein distance algorithm. Automatic categorization into Technology, Sports, Business, Politics, Entertainment, and General categories using Bangladesh-specific keywords.',
+        },
+        {
+          title: 'Frontend Features',
+          content: 'Built with Next.js 14 and React 18 with TypeScript for type safety. Fully responsive design (320px - 2560px) with dark mode toggle and persistent preferences. Bilingual interface supporting both Bangla and English content. Category filtering and smooth pagination (30 articles per page).',
+        },
+        {
+          title: 'Backend Architecture',
+          content: 'Next.js API Routes for serverless endpoints. MongoDB Atlas cloud database with optimized indexes. RSS feed parsing with HTML cleaning and text extraction. RESTful API with pagination, filtering, and health check endpoints.',
+        },
+        {
+          title: 'Key Libraries',
+          content: 'rss-parser for RSS feed parsing, date-fns for date manipulation, fast-levenshtein for string similarity detection, and MongoDB official driver for database operations.',
+        },
+      ],
+      results: [
+        { value: '90%', label: 'Duplicate Detection' },
+        { value: '6', label: 'Categories' },
+        { value: 'Daily', label: 'Auto Updates' },
+      ],
+      color: 'from-blue-500 to-indigo-600',
+      github: 'https://github.com/Kaoserahamed/News',
+      demo: null,
+    },
+    {
       title: 'Task – Travel & Adventure Platform',
       year: '2025',
       category: 'web',
