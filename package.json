@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Professional portfolio website for Md Kaoser Ahamed Anik - Full-Stack Developer",
   "author": "Md Kaoser Ahamed Anik <kaoser614@gmail.com>",
+  "homepage": "https://kaoserahamed.github.io/Portfolio",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
@@ -18,7 +19,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +43,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.5.0",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.10",
     "tailwindcss": "^3.4.19"
   }
