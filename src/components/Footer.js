@@ -4,14 +4,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-slate-900 text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-lg font-semibold">
               Md Kaoser Ahamed Anik
             </p>
-            <p className="text-gray-400 text-sm">
+            <p className="text-slate-400 text-sm">
               Software Engineer & AI Practitioner
             </p>
           </div>
@@ -56,10 +56,10 @@ const Footer = () => {
           </div>
 
           <div className="text-center md:text-right">
-            <p className="text-gray-400 text-sm">
+            <p className="text-slate-400 text-sm">
               © {currentYear} Kaoser Anik. All rights reserved.
             </p>
-            <p className="text-gray-500 text-xs mt-1">
+            <p className="text-slate-500 text-xs mt-1">
               Built with React & Tailwind CSS
             </p>
           </div>

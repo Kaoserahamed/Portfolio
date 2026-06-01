@@ -14,7 +14,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-slate-50">
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
       <main>
         <Hero />

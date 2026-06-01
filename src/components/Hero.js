@@ -4,29 +4,29 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-purple-50 pt-20"
     >
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6 animate-fade-in">
             Hi, I'm <span className="text-primary">Md Kaoser Ahamed Anik</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8">
+          <p className="text-xl md:text-2xl text-slate-500 font-medium mb-8">
             Software Engineer & AI Practitioner | CSE Graduate from SUST
           </p>
-          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed">
             I specialize in building responsive MERN stack applications and integrating them with optimized deep learning models, bridging the gap between clean backend architecture and intelligent system design.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="#contact"
-              className="bg-primary text-white px-8 py-3 rounded-full hover:bg-secondary transition-colors shadow-lg hover:shadow-xl"
+              className="bg-primary text-white px-8 py-3 rounded-full hover:bg-secondary transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Get In Touch
             </a>
             <a
               href="#projects"
-              className="bg-white text-primary px-8 py-3 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-colors shadow-lg"
+              className="bg-white text-primary px-8 py-3 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               View Projects
             </a>
@@ -36,7 +36,7 @@ const Hero = () => {
               href="https://github.com/Kaoserahamed"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-primary transition-colors"
+              className="text-slate-600 hover:text-primary transition-all duration-300 hover:-translate-y-1"
               title="GitHub"
             >
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -47,7 +47,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/md-kaoser-ahamed-anik-994bba33a/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-primary transition-colors"
+              className="text-slate-600 hover:text-primary transition-all duration-300 hover:-translate-y-1"
               title="LinkedIn"
             >
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -58,7 +58,7 @@ const Hero = () => {
               href="https://leetcode.com/u/Kaoser_208/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-primary transition-colors"
+              className="text-slate-600 hover:text-primary transition-all duration-300 hover:-translate-y-1"
               title="LeetCode"
             >
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -69,7 +69,7 @@ const Hero = () => {
               href="https://codeforces.com/profile/2020331019"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-primary transition-colors"
+              className="text-slate-600 hover:text-primary transition-all duration-300 hover:-translate-y-1"
               title="Codeforces"
             >
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -80,7 +80,7 @@ const Hero = () => {
               href="https://www.geeksforgeeks.org/profile/akaos0c3y"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-primary transition-colors"
+              className="text-slate-600 hover:text-primary transition-all duration-300 hover:-translate-y-1"
               title="GeeksforGeeks"
             >
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">

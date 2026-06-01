@@ -35,12 +35,12 @@ const Header = ({ activeSection, setActiveSection }) => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg py-4' : 'bg-transparent py-6'
+        isScrolled ? 'bg-white shadow-lg py-4' : 'bg-white/80 backdrop-blur-sm py-6'
       }`}
     >
       <nav className="container mx-auto px-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-primary">
-          <span className="text-gray-800">Kaoser</span>
+        <div className="text-2xl font-bold">
+          <span className="text-slate-900">Kaoser</span>
           <span className="text-primary">Ahamed</span>
         </div>
 
@@ -51,7 +51,7 @@ const Header = ({ activeSection, setActiveSection }) => {
               <button
                 onClick={() => scrollToSection(item.id)}
                 className={`hover:text-primary transition-colors ${
-                  activeSection === item.id ? 'text-primary font-semibold' : 'text-gray-700'
+                  activeSection === item.id ? 'text-primary font-semibold' : 'text-slate-700'
                 }`}
               >
                 {item.name}
@@ -62,7 +62,7 @@ const Header = ({ activeSection, setActiveSection }) => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-700"
+          className="md:hidden text-slate-700 hover:text-primary transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
@@ -92,14 +92,14 @@ const Header = ({ activeSection, setActiveSection }) => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div className="md:hidden bg-white shadow-lg border-t border-slate-100">
           <ul className="px-4 py-4 space-y-4">
             {navItems.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left hover:text-primary transition-colors ${
-                    activeSection === item.id ? 'text-primary font-semibold' : 'text-gray-700'
+                    activeSection === item.id ? 'text-primary font-semibold' : 'text-slate-700'
                   }`}
                 >
                   {item.name}

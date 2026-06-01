@@ -32,12 +32,12 @@ const Certificates = () => {
   ];
 
   return (
-    <section id="certificates" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="certificates" className="py-12 md:py-24 bg-gradient-to-br from-slate-50 to-indigo-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
+        <h2 className="text-4xl font-bold text-center text-slate-900 mb-4">
           Certifications
         </h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
           Professional certifications and completed training programs
         </p>
 
@@ -58,10 +58,10 @@ const Certificates = () => {
                 <p className="text-sm font-semibold text-primary mb-2">
                   {cert.issuer}
                 </p>
-                <p className="text-sm text-gray-500 mb-4 font-medium">
+                <p className="text-sm text-slate-500 mb-4 font-medium">
                   Issued: {cert.date}
                 </p>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                <p className="text-slate-700 text-sm leading-relaxed mb-4">
                   {cert.description}
                 </p>
                 <a
@@ -92,7 +92,7 @@ const Certificates = () => {
 
         {/* Additional Info */}
         <div className="max-w-4xl mx-auto mt-12 text-center">
-          <p className="text-gray-600 text-sm">
+          <p className="text-slate-600 text-sm">
             All certifications are verified and can be viewed on{' '}
             <a
               href="https://www.credly.com/users/md-kaoser-ahamed-anik"
