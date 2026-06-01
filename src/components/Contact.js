@@ -60,7 +60,7 @@ const Contact = () => {
       ),
       title: 'LinkedIn',
       value: 'md-kaoser-ahamed-anik',
-      link: 'https://linkedin.com/in/md-kaoser-ahamed-anik',
+      link: 'https://www.linkedin.com/in/md-kaoser-ahamed-anik-994bba33a/',
     },
     {
       icon: (
@@ -127,7 +127,7 @@ const Contact = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com/in/md-kaoser-ahamed-anik"
+                  href="https://www.linkedin.com/in/md-kaoser-ahamed-anik-994bba33a/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-primary transition-colors"

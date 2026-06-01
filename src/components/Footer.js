@@ -12,7 +12,7 @@ const Footer = () => {
               Md Kaoser Ahamed Anik
             </p>
             <p className="text-gray-400 text-sm">
-              Full-Stack Developer | AI Enthusiast
+              Software Engineer & AI Practitioner
             </p>
           </div>
 
@@ -29,7 +29,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/md-kaoser-ahamed-anik"
+              href="https://www.linkedin.com/in/md-kaoser-ahamed-anik-994bba33a/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
