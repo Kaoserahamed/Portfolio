@@ -32,7 +32,7 @@ const Experience = () => {
                   </div>
                   <div className="text-gray-600">
                     <span className="bg-white px-4 py-2 rounded-full text-sm font-medium shadow">
-                      2025 – Present
+                      2025 – May 2026
                     </span>
                     <p className="mt-2 text-sm">Remote</p>
                   </div>

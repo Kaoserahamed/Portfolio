@@ -13,7 +13,7 @@ const About = () => {
               I am a Computer Science graduate from <span className="font-semibold text-primary">Shahjalal University of Science and Technology</span> with a solid foundation in software architecture and data structures. I specialize in the MERN stack for full-stack engineering and deep learning model integration.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              My work focuses on building scalable backend systems (Node.js/Spring Boot) and deploying machine learning pipelines. From optimization problems using Reinforcement Learning to computer vision systems, I develop production-ready solutions that handle real-world complexity.
+              As a computer science graduate, I am passionate about applying robust backend principles and machine learning workflows to build scalable, real-world applications.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               Currently working as an AI Model Trainer at <span className="font-semibold">Outlier.ai</span>, where I evaluate and improve large language models through RLHF (Reinforcement Learning from Human Feedback), focusing on code generation, logical reasoning, and mathematical problem-solving domains.
