@@ -6,9 +6,9 @@ const Education = () => {
       degree: 'BSc in Computer Science and Engineering',
       institution: 'Shahjalal University of Science and Technology',
       location: 'Sylhet, Bangladesh',
-      period: '2020 – Present',
+      period: '2020 – June 2026',
       gpa: '3.65/4.0',
-      description: 'Specializing in Full-Stack Development, Data Structures, Algorithms, and System Design. Active in research on Machine Learning and Computer Vision.',
+      description: 'Specializing in Full-Stack Development, Data Structures, Algorithms, and System Design. Research focus on Machine Learning and Computer Vision.',
       color: 'from-blue-500 to-indigo-600',
     },
     {

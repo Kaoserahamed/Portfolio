@@ -10,13 +10,13 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 shadow-lg">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              I am a Computer Science graduate from <span className="font-semibold text-primary">Shahjalal University of Science and Technology</span> with a solid foundation in software architecture and data structures. I specialize in the MERN stack for full-stack engineering, but I don't just build standard web apps—I like giving them brains.
+              I am a Computer Science graduate from <span className="font-semibold text-primary">Shahjalal University of Science and Technology</span> with a solid foundation in software architecture and data structures. I specialize in the MERN stack for full-stack engineering and deep learning model integration.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              My academic and independent work bridges the gap between clean backend code (Node.js/Spring Boot) and deep learning models. Whether it's optimization problems using Reinforcement Learning or deploying computer vision pipelines, I enjoy writing code that scales.
+              My work focuses on building scalable backend systems (Node.js/Spring Boot) and deploying machine learning pipelines. From optimization problems using Reinforcement Learning to computer vision systems, I develop production-ready solutions that handle real-world complexity.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              When I'm not building apps, I'm analyzing model outputs at <span className="font-semibold">Outlier.ai</span> or grinding algorithmic challenges on Codeforces.
+              Currently working as an AI Model Trainer at <span className="font-semibold">Outlier.ai</span>, where I evaluate and improve large language models through RLHF (Reinforcement Learning from Human Feedback), focusing on code generation, logical reasoning, and mathematical problem-solving domains.
             </p>
           </div>
           

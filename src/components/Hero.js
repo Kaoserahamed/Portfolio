@@ -15,8 +15,7 @@ const Hero = () => {
             Software Engineer & AI Practitioner | CSE Graduate from SUST
           </p>
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            I build robust full-stack applications and integrate them with smart machine learning models. 
-            Backed by 700+ competitive programming problems and hands-on experience training AI models.
+            I specialize in building responsive MERN stack applications and integrating them with optimized deep learning models, bridging the gap between clean backend architecture and intelligent system design.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

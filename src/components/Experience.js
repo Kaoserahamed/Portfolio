@@ -54,7 +54,7 @@ const Experience = () => {
                       />
                     </svg>
                     <span>
-                      <strong>Model Training:</strong> Trained and evaluated pre-released AI models using high-quality prompts and responses to improve model performance
+                      Evaluate and improve large language models through <strong>RLHF (Reinforcement Learning from Human Feedback)</strong>, focusing on code generation, logical reasoning, and mathematical problem-solving domains
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -72,7 +72,7 @@ const Experience = () => {
                       />
                     </svg>
                     <span>
-                      <strong>Evaluation:</strong> Compared model outputs and provided detailed feedback to enhance accuracy, reasoning capabilities, and overall model quality
+                      Provide detailed comparative analysis of model outputs, identifying edge cases and failure modes to enhance model accuracy and reasoning capabilities
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -90,20 +90,20 @@ const Experience = () => {
                       />
                     </svg>
                     <span>
-                      Contributed to the development of cutting-edge AI systems through rigorous testing and quality assurance
+                      Create high-quality training data through structured prompt engineering and response evaluation for pre-release AI models
                     </span>
                   </li>
                 </ul>
 
                 <div className="mt-6 flex flex-wrap gap-2">
                   <span className="bg-white text-primary px-3 py-1 rounded-full text-sm font-medium">
-                    AI/ML
+                    RLHF
                   </span>
                   <span className="bg-white text-primary px-3 py-1 rounded-full text-sm font-medium">
-                    Model Evaluation
+                    LLM Evaluation
                   </span>
                   <span className="bg-white text-primary px-3 py-1 rounded-full text-sm font-medium">
-                    Quality Assurance
+                    Prompt Engineering
                   </span>
                 </div>
               </div>
