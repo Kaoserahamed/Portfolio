@@ -14,15 +14,13 @@ function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-dark">
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
       <main>
         <Hero />
-        <About />
         <Skills />
-        <Experience />
         <Projects />
-        <Education />
+        <Experience />
         <Certificates />
         <Contact />
       </main>

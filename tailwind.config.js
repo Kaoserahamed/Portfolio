@@ -6,8 +6,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#4f46e5', // indigo-600 - more professional
-        secondary: '#0369a1', // sky-700 - deeper blue
+        primary: '#3B82F6', // Blue
+        accent: '#22C55E', // Green
+        dark: '#0F172A', // Slate 900
+        card: '#1E293B', // Slate 800
+      },
+      fontFamily: {
+        heading: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },

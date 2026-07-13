@@ -1,27 +1,21 @@
-import React from 'react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <p className="text-lg font-semibold">
-              Md Kaoser Ahamed Anik
-            </p>
-            <p className="text-slate-400 text-sm">
-              Software Engineer & AI Practitioner
-            </p>
+    <footer className="bg-card border-t border-slate-800 py-6 px-6">
+      <div className="container mx-auto max-w-6xl">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-center md:text-left">
+            <p className="text-white font-heading font-bold text-lg">MD. KAOSER AHAMED ANIK</p>
+            <p className="text-slate-400 text-sm">Software Engineer • ML Engineer • DevOps Engineer</p>
           </div>
 
-          <div className="flex gap-6 mb-4 md:mb-0">
+          <div className="flex gap-6">
             <a
               href="https://github.com/Kaoserahamed"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
+              className="text-slate-400 hover:text-primary transition-colors"
               aria-label="GitHub"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -32,7 +26,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/md-kaoser-ahamed-anik-994bba33a/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
+              className="text-slate-400 hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -41,7 +35,7 @@ const Footer = () => {
             </a>
             <a
               href="mailto:kaoser614@gmail.com"
-              className="hover:text-primary transition-colors"
+              className="text-slate-400 hover:text-primary transition-colors"
               aria-label="Email"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,10 +51,10 @@ const Footer = () => {
 
           <div className="text-center md:text-right">
             <p className="text-slate-400 text-sm">
-              © {currentYear} Kaoser Anik. All rights reserved.
+              © {currentYear} Kaoser Anik
             </p>
             <p className="text-slate-500 text-xs mt-1">
-              Built with React & Tailwind CSS
+              React • Tailwind CSS
             </p>
           </div>
         </div>
