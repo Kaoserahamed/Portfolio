@@ -12,7 +12,7 @@ const Skills = () => {
     },
     {
       title: 'Backend',
-      skills: ['Node.js', 'Express.js', 'RESTful APIs'],
+      skills: ['Node.js', 'Express.js', 'RESTful APIs', 'FastAPI'],
       icon: '⚙️'
     },
     {
@@ -32,12 +32,12 @@ const Skills = () => {
     },
     {
       title: 'Tools',
-      skills: ['Git', 'GitHub', 'Postman'],
+      skills: ['Git', 'GitHub', 'Postman', 'ChatGPT', 'Claude', 'Kiro'],
       icon: '🔧'
     },
     {
       title: 'AI & ML',
-      skills: ['TensorFlow', 'PyTorch', 'YOLOv11', 'ResNet', 'Vision Transformer'],
+      skills: ['TensorFlow', 'PyTorch', 'YOLOv11', 'ResNet', 'Vision Transformer', 'ConvLSTM', 'Attention U-Net'],
       icon: '🤖'
     },
   ];

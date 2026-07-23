@@ -9,6 +9,15 @@ const Certificates = () => {
       icon: '📄',
       link: 'https://doi.org/10.1109/ICCIT68739.2025.11491085'
     },
+    {
+      title: 'River Morphological Change Prediction using Spatio-Temporal Neural Models',
+      conference: 'To appear',
+      year: '2026',
+      authors: 'MD. Kaoser Ahamed Anik',
+      details: 'Built and trained 5 state-of-the-art spatio-temporal deep learning architectures for river morphology prediction. Used multi-temporal satellite water masks (1988–2025) to model long-term riverbank morphodynamics. Achieved best performance with Attention U-Net + ConvLSTM (IoU: 0.7005, Dice: 0.8236). Developed risk-zone maps using frequency-based metrics and a custom Hydrodynamic Stability Index.',
+      icon: '🌊',
+      link: null
+    },
   ];
 
   const certifications = [
