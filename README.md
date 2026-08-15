@@ -8,22 +8,7 @@ My personal portfolio website built using React and Tailwind CSS to showcase my 
 
 React, Tailwind CSS
 
-## Quick Start
 
-```bash
-git clone https://github.com/Kaoserahamed/Portfolio.git
-cd Portfolio
-npm install
-npm start
-```
-
-Runs locally at `http://localhost:3000`
-
-## Scripts
-
-- `npm start` – Development server
-- `npm run build` – Production build
-- `npm run deploy` – Deploy to GitHub Pages
 
 ## Contact
 
