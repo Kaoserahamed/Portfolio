@@ -2,71 +2,79 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center bg-dark pt-20 px-6 py-12"
+      className="min-h-screen flex items-center bg-dark pt-16 px-6 py-8"
     >
       <div className="container mx-auto max-w-7xl">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left Side - Hero */}
           <div>
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4 tracking-tight leading-tight">
               MD. KAOSER AHAMED ANIK
             </h1>
 
-            <p className="text-xl text-slate-300 font-body mb-4">
-              Software Engineer • ML Engineer • DevOps Engineer
+            <p className="text-2xl text-white font-semibold font-body mb-3">
+              • Software Engineer
             </p>
 
-            <p className="text-base text-slate-400 font-body mb-8">
-              AWS Certified Solutions Architect • Researcher • Competitive Programmer • CSE Graduate from SUST
+            <p className="text-base text-slate-300 font-body mb-4">
+              CSE Graduate from SUST • AWS Certified Solutions Architect • AI Model Trainer • Researcher
             </p>
+
+           
 
             {/* CTA Buttons */}
-            <div className="flex gap-4 mb-8">
+            <div className="flex gap-4 mb-6">
               <a
                 href="https://github.com/Kaoserahamed/Portfolio/blob/main/Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-blue-600 transition-all hover:scale-105 shadow-lg shadow-primary/20 text-sm"
+                className="px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-blue-600 transition-all hover:scale-105 shadow-lg shadow-primary/20"
               >
                 Download Resume
               </a>
               <a
                 href="#contact"
-                className="px-6 py-2.5 bg-card text-white font-medium rounded-lg hover:bg-slate-700 transition-all border border-slate-700 hover:border-primary text-sm"
+                className="px-6 py-3 bg-card text-white font-semibold rounded-lg hover:bg-slate-700 transition-all border border-slate-700 hover:border-primary"
               >
-                Hire Me
+                Let's Work Together
               </a>
             </div>
 
-            {/* Stats Bar */}
+            {/* Credibility Indicators */}
             <div className="flex flex-wrap gap-6 text-sm text-slate-400 font-body">
               <div className="flex items-center gap-2">
-                <span className="text-accent text-lg">⭐</span>
-                <span>AWS Certified</span>
+                <span className="w-2 h-2 bg-accent rounded-full"></span>
+                <span>AWS Certified Solutions Architect</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-accent text-lg">📄</span>
-                <span>ICCIT 2025</span>
+                <span className="w-2 h-2 bg-accent rounded-full"></span>
+                <span>IEEE ICCIT 2025 Publication</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-accent text-lg">💻</span>
-                <span>700+ Problems</span>
+                <span className="w-2 h-2 bg-accent rounded-full"></span>
+                <span>700+ Competitive Programming</span>
               </div>
             </div>
           </div>
 
           {/* Right Side - About */}
           <div>
-            <h2 className="text-3xl font-heading font-bold text-white mb-6">About Me</h2>
-            <div className="space-y-4 text-slate-300 font-body leading-relaxed">
+            <h2 className="text-3xl font-heading font-bold text-white mb-4">My Journey</h2>
+            <div className="space-y-3 text-slate-300 font-body leading-relaxed">
               <p>
-                I am a Computer Science graduate from <span className="text-primary font-semibold">Shahjalal University of Science and Technology (SUST)</span> with expertise spanning full-stack development, machine learning engineering, and cloud infrastructure. As an <span className="text-accent font-semibold">AWS Certified Solutions Architect – Associate</span>, I design and deploy scalable cloud solutions.
+                My journey started at <span className="text-primary font-semibold">SUST</span>, where I built a strong foundation in computer science, programming, and problem-solving through <span className="text-primary font-semibold">700+ competitive programming problems</span>.
               </p>
               <p>
-                My technical expertise includes building production-ready applications with the MERN stack, developing deep learning models for research (ICCIT 2025 publication with 98.41% accuracy), and implementing DevOps practices with Docker and Linux.
+                From there, I moved into <span className="text-accent font-semibold">software development</span>, building full-stack applications and learning how to design and deploy real-world systems.
               </p>
               <p>
-                Currently working as an AI Model Trainer at <span className="text-accent font-semibold">Outlier.ai</span>, where I evaluate and improve large language models through RLHF, focusing on code generation, logical reasoning, and mathematical problem-solving. I've solved 700+ competitive programming problems across Codeforces, LeetCode, and GeeksforGeeks.
+                My interest in <span className="text-accent font-semibold">AI/ML and deep learning</span> led me into research, including two publications: an <span className="text-primary font-semibold">IEEE ICCIT 2025 paper on invasive plant classification</span> and a <span className="text-primary font-semibold">Springer publication on river morphology prediction</span>.
+              </p>
+              <p>
+                Along the way, I explored <span className="text-accent font-semibold">AWS and cloud engineering</span>, earning the <span className="text-primary font-semibold">AWS Certified Solutions Architect – Associate</span> certification.
+              </p>
+              <p>
+                Today, I work as an <span className="text-accent font-semibold">AI Model Trainer at Outlier.ai</span>, working with LLM evaluation while continuing to build <span className="text-primary font-semibold">AI-powered software and ML systems</span>.
               </p>
             </div>
           </div>

@@ -16,10 +16,10 @@ function App() {
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
       <main>
         <Hero />
-        <Skills />
-        <Projects />
         <Experience />
+        <Projects />
         <Certificates />
+        <Skills />
         <Contact />
       </main>
       <Footer />

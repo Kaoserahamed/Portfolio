@@ -23,24 +23,24 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-12 md:py-24 bg-white">
+    <section id="education" className="py-8 md:py-12 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-slate-900 mb-4">
+        <h2 className="text-4xl font-bold text-center text-slate-900 mb-2">
           Education
         </h2>
-        <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-slate-600 mb-6 max-w-2xl mx-auto">
           Academic background and achievements
         </p>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-6">
           {education.map((edu, index) => (
             <div
               key={index}
               className="bg-gradient-to-br from-slate-50 to-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow"
             >
               <div className={`bg-gradient-to-r ${edu.color} p-1`}></div>
-              <div className="p-8">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div className="p-5">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-slate-900 mb-2">
                       {edu.degree}
@@ -66,11 +66,11 @@ const Education = () => {
         </div>
 
         {/* Interests Section */}
-        <div className="max-w-4xl mx-auto mt-16">
-          <h3 className="text-3xl font-bold text-center text-slate-900 mb-8">
+        <div className="max-w-4xl mx-auto mt-8">
+          <h3 className="text-3xl font-bold text-center text-slate-900 mb-4">
             Interests & Passions
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
             {[
               { name: 'Competitive Programming', icon: '💻' },
               { name: 'Computer Security', icon: '🔒' },

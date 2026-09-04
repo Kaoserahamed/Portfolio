@@ -1,23 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: 'Inter', system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #0F172A;
-  color: #E2E8F0;
+/* Design System */
+:root {
+  /* Spacing Scale */
+  --space-section: 120px;
+  --space-section-mobile: 64px;
+  --space-content: 80px;
+  --space-content-mobile: 48px;
+  --space-card: 32px;
+  --space-card-mobile: 24px;
+  
+  /* Container */
+  --container-max: 1280px;
+  --container-padding: 32px;
+  --container-padding-mobile: 24px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (max-width: 768px) {
+  :root {
+    --space-section: 64px;
+    --space-content: 48px;
+    --space-card: 24px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0A0F1E;
+  color: #E2E8F0;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: prefer-reduced-motion) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Selection */
+::selection {
+  background-color: #3B82F6;
+  color: #FFFFFF;
+}
+
+/* Focus Visible */
+:focus-visible {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
 }

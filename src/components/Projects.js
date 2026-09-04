@@ -14,50 +14,49 @@ const Projects = () => {
 
   const allProjects = [
     {
-      title: 'CodeAtlas AI',
-      year: '2026',
-      category: 'web',
-      description: 'An interactive visual mapping tool to navigate and understand complex codebases through intelligent AST parsing and graph visualization.',
-      fullDescription: 'CodeAtlas AI is a powerful code exploration tool that creates visual maps of JavaScript and TypeScript projects. Using custom Babel AST parsing, it traces relationships between files, functions, and imports to help developers understand complex codebases quickly.',
-      technologies: ['React Flow', 'TypeScript', 'Node.js', 'Fastify', 'Babel AST', 'Neo4j'],
-      highlights: [
-        'Custom parser with Babel AST to trace file, function, and import connections',
-        'Interactive graph visualization with React Flow for code navigation',
-        'Neo4j graph database for efficient relationship queries',
-        'Fastify backend for high-performance API endpoints',
-        'Supports JavaScript and TypeScript codebases',
-      ],
-      github: 'https://github.com/Kaoserahamed/CodeAtlasAI_mvp',
-      demo: 'https://kaoserahamed.github.io/CodeAtlasAI_mvp/',
-    },
-    {
       title: 'DataSense AI',
       year: '2026',
       category: 'ai-ml',
-      description: 'An interactive AI-powered platform for dataset exploration, cleaning, and analysis using natural language.',
-      fullDescription: 'DataSense AI is an interactive platform built to make dataset exploration, cleaning, and analysis effort-free. It combines automated data processing with conversational AI so you can ask questions, transform data, and build charts using natural language.',
+      description: 'AI-powered data analysis platform that allows users to upload CSV/Excel datasets and explore, clean, visualize, and query their data using natural language.',
+      fullDescription: 'DataSense AI transforms data analysis by combining automated processing with conversational AI. Users can ask questions in plain English, which are converted into safe Pandas operations. The platform handles data profiling, cleaning, and visualization without requiring any programming knowledge.',
       technologies: ['FastAPI', 'Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Plotly', 'React', 'TypeScript', 'Tailwind CSS', 'OpenAI API'],
       highlights: [
-        'Conversational data analysis with plain-English queries converted into safe Pandas code',
-        'Built-in data cleaning toolkit for deduplication, missing value handling, normalization, encoding, outlier removal, and date feature extraction',
-        'Interactive visualizations for bar charts, line charts, scatter plots, box plots, histograms, and correlation heatmaps',
-        'Automated data profiling for CSV, Excel, JSON, and Parquet files with quality warnings and inferred types',
+        'Natural language queries converted into safe Pandas operations for data analysis',
+        'Automated data profiling supporting CSV, Excel, JSON, and Parquet with quality warnings',
+        'Built-in cleaning toolkit: deduplication, missing values, normalization, encoding, outlier removal',
+        'Interactive visualizations: bar, line, scatter, box, histogram, and correlation heatmaps',
       ],
       github: 'https://github.com/Kaoserahamed/DataSense-AI',
       demo: 'https://data-sense-ai-ksif-pqfwm3djl-kaoser614-7344s-projects.vercel.app/',
     },
     {
-      title: 'River Morphological Change Prediction using Spatio-Temporal Neural Models',
+      title: 'CodeAtlas AI',
+      year: '2026',
+      category: 'web',
+      description: 'Interactive visual code exploration tool that maps JavaScript/TypeScript codebases using AST parsing and graph visualization to help developers understand complex architectures.',
+      fullDescription: 'CodeAtlas AI creates visual dependency maps of codebases by parsing JavaScript and TypeScript files with Babel AST. It traces relationships between files, functions, and imports, storing them in a Neo4j graph database for efficient querying. The interactive graph visualization powered by React Flow enables quick code navigation and architecture understanding.',
+      technologies: ['React Flow', 'TypeScript', 'Node.js', 'Fastify', 'Babel AST', 'Neo4j'],
+      highlights: [
+        'Custom Babel AST parser traces file, function, and import dependencies across codebases',
+        'Interactive graph visualization with React Flow for intuitive code navigation',
+        'Neo4j graph database enables efficient relationship queries and path finding',
+        'Fastify backend provides high-performance API endpoints for real-time exploration',
+      ],
+      github: 'https://github.com/Kaoserahamed/CodeAtlasAI_mvp',
+      demo: 'https://kaoserahamed.github.io/CodeAtlasAI_mvp/',
+    },
+    {
+      title: 'River Morphological Change Prediction',
       year: '2026',
       category: 'ai-ml',
-      description: 'A research-driven spatio-temporal deep learning project for predicting river morphology changes from multi-temporal satellite data.',
-      fullDescription: 'This project focuses on predicting river morphological changes using multi-temporal satellite water masks from 1988 to 2025. It evaluates five advanced spatio-temporal neural architectures and develops risk-zone maps using frequency-based metrics and a custom Hydrodynamic Stability Index.',
+      description: 'Spatio-temporal deep learning system predicting river morphology changes using 37 years of satellite data, achieving IoU 0.7005 with Attention U-Net + ConvLSTM.',
+      fullDescription: 'This research project predicts river morphological changes using multi-temporal satellite water masks spanning 1988–2025. Five state-of-the-art spatio-temporal architectures were evaluated, with Attention U-Net + ConvLSTM achieving the best performance. The system generates risk-zone maps using frequency analysis and a custom Hydrodynamic Stability Index.',
       technologies: ['Python', 'PyTorch', 'ConvLSTM', 'Attention U-Net', 'Remote Sensing'],
       highlights: [
-        'Built and trained five state-of-the-art spatio-temporal deep learning architectures for river morphology prediction',
-        'Used multi-temporal satellite water masks from 1988 to 2025 to model long-term riverbank morphodynamics',
-        'Achieved best performance with Attention U-Net + ConvLSTM (IoU: 0.7005, Dice: 0.8236)',
-        'Developed risk-zone maps with frequency-based metrics and a custom Hydrodynamic Stability Index',
+        'Evaluated five spatio-temporal architectures for long-term riverbank morphodynamics prediction',
+        'Multi-temporal satellite data from 1988–2025 enables 37-year pattern analysis',
+        'Best model: Attention U-Net + ConvLSTM (IoU: 0.7005, Dice: 0.8236)',
+        'Generated risk-zone maps with custom Hydrodynamic Stability Index',
       ],
       github: null,
     },
@@ -65,16 +64,47 @@ const Projects = () => {
       title: 'Invasive Alien Plants Classification',
       year: '2025',
       category: 'ai-ml',
-      description: 'Research project accepted at ICCIT 2025 focusing on automated classification of invasive plant species using deep learning models.',
-      fullDescription: 'This research addresses the ecological threat of invasive alien plants in Bangladesh through deep learning. A dataset of 8,452 images representing 11 invasive species was collected. YOLOv11x achieves 98.41% classification accuracy.',
+      description: 'Deep learning classification system identifying 11 invasive plant species with 98.41% accuracy using ResNet, ViT, and YOLO. Published at IEEE ICCIT 2025.',
+      fullDescription: 'This research addresses ecological threats from invasive plants in Bangladesh using deep learning. An 8,452-image dataset covering 11 species was collected and annotated. Multiple architectures including ResNet, Vision Transformer, and YOLO were evaluated, achieving 98.41% best accuracy. The work was accepted at IEEE ICCIT 2025.',
       technologies: ['Python', 'TensorFlow', 'YOLOv11', 'ResNet', 'Vision Transformer', 'CNN'],
       highlights: [
-        'Accepted at International Conference on Computer and Information Technology (ICCIT) 2025',
-        'Developed deep learning-based classification system using 8.4K-image dataset',
-        'Achieved 98.41% accuracy using ResNet, Vision Transformer (ViT), and YOLO',
-        'Compared 5 deep learning models for optimal performance',
+        'Published at IEEE International Conference on Computer and Information Technology (ICCIT) 2025',
+        'Collected and annotated 8.4K-image dataset covering 11 invasive plant species',
+        'Evaluated ResNet, Vision Transformer (ViT), and YOLO architectures',
+        'Achieved 98.41% best classification accuracy',
       ],
       github: null,
+    },
+    {
+      title: 'E-Commerce Admin Dashboard',
+      year: '2025',
+      category: 'web',
+      description: 'Full-stack e-commerce administration platform featuring 62 REST APIs, 9 core modules, role-based access control, and centralized management workflows.',
+      fullDescription: 'Production-ready admin dashboard built with NestJS and React, managing complex e-commerce operations. Features 44 granular permissions across 9 modules, JWT authentication with token rotation, variant product management, and nested category hierarchies. Implements atomic database operations with Prisma and permission-aware frontend rendering.',
+      technologies: ['NestJS', 'TypeScript', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'React 19', 'Vite', 'Tailwind CSS', 'JWT', 'bcrypt'],
+      highlights: [
+        '62 REST API endpoints organized across 9 core modules with comprehensive functionality',
+        'Fine-grained RBAC with 44 permissions and secure JWT token rotation (15-min access, 7-day refresh)',
+        'Complex product catalog: variant matrix generation, nested categories with cycle prevention',
+        'Permission-aware UI with dynamic rendering and automatic token refresh on 401 errors',
+      ],
+      github: 'https://github.com/Kaoserahamed/assignment_backend_ecommerce_admin',
+    },
+    {
+      title: 'Student Assistant',
+      year: '2026',
+      category: 'ai-ml',
+      description: 'RAG-based study assistant enabling students to upload course materials and ask questions. Uses Pinecone vector search and Gemini API with source citations.',
+      fullDescription: 'AI-powered learning platform where students upload PDFs, documents, and slides, then receive accurate answers based on their materials. Uses semantic search with Pinecone to find relevant sections and Google Gemini API to generate contextual answers. Includes source citations with page numbers and conversation history persistence.',
+      technologies: ['FastAPI', 'React', 'TypeScript', 'Python 3.11', 'SQLAlchemy', 'Pinecone', 'Google Gemini API', 'PyPDF', 'Vite', 'Tailwind CSS', 'MySQL'],
+      highlights: [
+        'Smart document processing: automatic extraction and chunking for PDF, DOCX, PPTX, TXT',
+        'Semantic search with Pinecone vector database retrieves relevant course material sections',
+        'Gemini API generates contextual answers with source citations and page numbers',
+        'Built-in document viewer and persistent conversation history with JWT authentication',
+      ],
+      github: null,
+      demo: null,
     },
     {
       title: 'Smart Traffic Management System',
@@ -90,6 +120,24 @@ const Projects = () => {
         'SUMO (Simulation of Urban MObility) integration',
       ],
       github: 'https://github.com/Kaoserahamed/Smart_Traffic_Management_System',
+    },
+    {
+      title: 'E-Commerce Admin Dashboard',
+      year: '2025',
+      category: 'web',
+      description: 'A production-ready full-stack admin dashboard with fine-grained RBAC, managing e-commerce operations across 62 API endpoints and 9 core modules.',
+      fullDescription: 'E-Commerce Admin Dashboard is a comprehensive full-stack platform built for managing complex e-commerce operations. Features 44 granular permissions with Role-Based Access Control, product catalog management with variants, nested category hierarchies, and secure JWT authentication with token rotation. Built with NestJS backend and React frontend, serving 11 admin interfaces.',
+      technologies: ['NestJS', 'TypeScript', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'React 19', 'Vite', 'Tailwind CSS', 'JWT', 'bcrypt'],
+      highlights: [
+        '62 REST API endpoints across 9 core modules (Auth, Permissions, Roles, Users, Media, Categories, Brands, Attributes, Products)',
+        'Fine-grained RBAC with 44 granular permissions and module-level grouping',
+        'Secure JWT authentication with short-lived access tokens (15 mins) and rotatable refresh tokens (7 days)',
+        'Complex catalog features: variant product matrix generation, nested category trees with cycle prevention',
+        'Atomic database operations using Prisma transactions with comprehensive validations',
+        'Permission-aware frontend with dynamic UI rendering and transparent background token refresh',
+        '11 dedicated admin interfaces with responsive design and custom state handling',
+      ],
+      github: 'https://github.com/Kaoserahamed/assignment_backend_ecommerce_admin',
     },
     {
       title: 'Bangladesh News Aggregator',
@@ -164,13 +212,13 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-12 px-6 bg-dark">
+    <section id="projects" className="py-8 px-6 bg-dark">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-3xl font-heading font-bold text-white mb-4">Featured Projects</h2>
-        <p className="text-slate-400 mb-6 text-sm">A showcase of my technical expertise and problem-solving abilities</p>
+        <h2 className="text-3xl font-heading font-bold text-white mb-2">Featured Projects</h2>
+        <p className="text-slate-400 mb-4 text-sm">A showcase of my technical expertise and problem-solving abilities</p>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap gap-3 mb-8">
+        <div className="flex flex-wrap gap-3 mb-6">
           {categories.map((category) => (
             <button
               key={category.id}
@@ -235,21 +283,25 @@ const Projects = () => {
 
                 <div className="flex items-center justify-between">
                   <button
-                    className="text-primary hover:text-blue-400 font-semibold text-sm transition-colors"
+                    className="text-primary hover:text-blue-400 font-semibold text-sm transition-colors inline-flex items-center gap-1"
                   >
-                    View Details →
+                    View Case Study
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </button>
-                  <div className="flex gap-2">
+                  <div className="flex gap-3">
                     {project.demo && (
                       <a
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="text-slate-400 hover:text-accent transition-colors"
+                        className="text-xs font-medium text-accent hover:text-green-400 transition-colors inline-flex items-center gap-1"
                         title="Live Demo"
                       >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        Live Demo
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
                       </a>
@@ -260,10 +312,11 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="text-slate-400 hover:text-primary transition-colors"
+                        className="text-xs font-medium text-slate-400 hover:text-primary transition-colors inline-flex items-center gap-1"
                         title="GitHub"
                       >
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        GitHub
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                         </svg>
                       </a>

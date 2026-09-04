@@ -56,14 +56,15 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-12 px-6 bg-dark">
+    <section id="contact" className="py-8 px-6 bg-dark">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl font-heading font-bold text-white mb-8">Get In Touch</h2>
+        <h2 className="text-3xl font-heading font-bold text-white mb-2">Let's Build Something</h2>
+        <p className="text-slate-400 mb-4 text-base">I'm open to software engineering, AI/ML, and research-oriented opportunities. If you're working on an interesting problem, I'd be happy to connect.</p>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {/* Contact Form */}
           <div>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3">
               <div>
                 <label htmlFor="name" className="block text-slate-300 font-medium mb-2">
                   Name
@@ -120,8 +121,14 @@ const Contact = () => {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-xl font-heading font-semibold text-white mb-4">Connect</h3>
-            <div className="space-y-3">
+            <h3 className="text-xl font-heading font-semibold text-white mb-3">Connect With Me</h3>
+            <p className="text-slate-400 text-sm mb-4">
+              <span className="inline-flex items-center gap-2 bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-medium">
+                <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+                Open to Opportunities
+              </span>
+            </p>
+            <div className="space-y-2">
               {socialLinks.map((link, index) => (
                 <a
                   key={index}
@@ -135,7 +142,7 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="mt-6 bg-card rounded-lg p-4 border border-slate-700">
+            <div className="mt-4 bg-card rounded-lg p-4 border border-slate-700">
               <h4 className="text-white font-semibold mb-2 text-sm">Email</h4>
               <p className="text-slate-300 text-sm">kaoser614@gmail.com</p>
             </div>
