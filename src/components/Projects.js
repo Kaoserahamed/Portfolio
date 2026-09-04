@@ -27,7 +27,7 @@ const Projects = () => {
         'Interactive visualizations: bar, line, scatter, box, histogram, and correlation heatmaps',
       ],
       github: 'https://github.com/Kaoserahamed/DataSense-AI',
-      demo: 'https://data-sense-ai-ksif-pqfwm3djl-kaoser614-7344s-projects.vercel.app/',
+      demo: 'https://data-sense-ai-ksif.vercel.app',
     },
     {
       title: 'CodeAtlas AI',
@@ -59,6 +59,7 @@ const Projects = () => {
         'Generated risk-zone maps with custom Hydrodynamic Stability Index',
       ],
       github: null,
+      paperLink: 'https://thesai.org/Publications/ViewPaper?Volume=17&Issue=7&Code=IJACSA&SerialNo=74#',
     },
     {
       title: 'Invasive Alien Plants Classification',
@@ -74,6 +75,7 @@ const Projects = () => {
         'Achieved 98.41% best classification accuracy',
       ],
       github: null,
+      paperLink: 'https://doi.org/10.1109/ICCIT68739.2025.11491085',
     },
     {
       title: 'E-Commerce Admin Dashboard',
@@ -122,24 +124,6 @@ const Projects = () => {
       github: 'https://github.com/Kaoserahamed/Smart_Traffic_Management_System',
     },
     {
-      title: 'E-Commerce Admin Dashboard',
-      year: '2025',
-      category: 'web',
-      description: 'A production-ready full-stack admin dashboard with fine-grained RBAC, managing e-commerce operations across 62 API endpoints and 9 core modules.',
-      fullDescription: 'E-Commerce Admin Dashboard is a comprehensive full-stack platform built for managing complex e-commerce operations. Features 44 granular permissions with Role-Based Access Control, product catalog management with variants, nested category hierarchies, and secure JWT authentication with token rotation. Built with NestJS backend and React frontend, serving 11 admin interfaces.',
-      technologies: ['NestJS', 'TypeScript', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'React 19', 'Vite', 'Tailwind CSS', 'JWT', 'bcrypt'],
-      highlights: [
-        '62 REST API endpoints across 9 core modules (Auth, Permissions, Roles, Users, Media, Categories, Brands, Attributes, Products)',
-        'Fine-grained RBAC with 44 granular permissions and module-level grouping',
-        'Secure JWT authentication with short-lived access tokens (15 mins) and rotatable refresh tokens (7 days)',
-        'Complex catalog features: variant product matrix generation, nested category trees with cycle prevention',
-        'Atomic database operations using Prisma transactions with comprehensive validations',
-        'Permission-aware frontend with dynamic UI rendering and transparent background token refresh',
-        '11 dedicated admin interfaces with responsive design and custom state handling',
-      ],
-      github: 'https://github.com/Kaoserahamed/assignment_backend_ecommerce_admin',
-    },
-    {
       title: 'Bangladesh News Aggregator',
       year: '2024',
       category: 'web',
@@ -155,7 +139,7 @@ const Projects = () => {
       github: 'https://github.com/Kaoserahamed/News',
     },
     {
-      title: 'Travel & Adventure Platform',
+      title: 'Tour Management Platform',
       year: '2025',
       category: 'web',
       description: 'A comprehensive travel platform connecting travelers with tour companies, offering AI-based recommendations.',
@@ -168,6 +152,7 @@ const Projects = () => {
         'Multi-role platform (Travelers, Tour Companies, Admins)',
       ],
       github: 'https://github.com/Kaoserahamed/Task',
+      demo: 'https://frontend-kaoser614-7344s-projects.vercel.app/',
     },
     {
       title: 'API Hub',
@@ -291,6 +276,21 @@ const Projects = () => {
                     </svg>
                   </button>
                   <div className="flex gap-3">
+                    {project.paperLink && (
+                      <a
+                        href={project.paperLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-xs font-medium text-accent hover:text-green-400 transition-colors inline-flex items-center gap-1"
+                        title="Research Paper"
+                      >
+                        Paper
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      </a>
+                    )}
                     {project.demo && (
                       <a
                         href={project.demo}
