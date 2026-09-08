@@ -30,6 +30,22 @@ const Projects = () => {
       demo: 'https://data-sense-ai-ksif.vercel.app',
     },
     {
+      title: 'Complaint Management System',
+      year: '2026',
+      category: 'web',
+      description: 'Full-stack web application for reporting and managing public complaints with media upload support across various categories (road, electricity, water, garbage, public safety).',
+      fullDescription: 'A comprehensive complaint management platform enabling citizens to report public issues with image/video proof. Built with React, FastAPI, and PostgreSQL, featuring automated CI/CD deployment to Azure. Includes media processing, complaint tracking, dashboard statistics, and RESTful API with comprehensive documentation.',
+      technologies: ['React 18', 'TypeScript', 'FastAPI', 'Python', 'PostgreSQL', 'SQLAlchemy', 'Tailwind CSS', 'Docker', 'Azure App Service', 'GitHub Actions', 'Nginx', 'Vite'],
+      highlights: [
+        'Multi-category complaint reporting system with image/video upload and processing',
+        'RESTful API with FastAPI, SQLAlchemy ORM, and Pydantic v2 validation',
+        'Automated CI/CD pipeline: GitHub Actions → Azure Container Registry → Azure App Service',
+        'Dockerized deployment with PostgreSQL database and comprehensive API documentation',
+      ],
+      github: 'https://github.com/Kaoserahamed/Commplaintmanagement',
+      demo: 'https://complaint2292-web.azurewebsites.net/',
+    },
+    {
       title: 'CodeAtlas AI',
       year: '2026',
       category: 'web',
