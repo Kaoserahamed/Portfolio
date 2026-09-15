@@ -30,7 +30,6 @@ const Projects = () => {
       ],
       github: null,
       demo: 'https://stockpilot-web.azurewebsites.net',
-      apiDocs: 'https://stockpilot-api.azurewebsites.net/docs',
       backend: 'https://stockpilot-api.azurewebsites.net',
     },
     {
