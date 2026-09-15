@@ -102,8 +102,8 @@ const ProjectDetail = ({ project, onClose }) => {
           </div>
 
           {/* Links */}
-          {(project.github || project.demo) && (
-            <div className="flex gap-4">
+          {(project.github || project.demo || project.apiDocs || project.backend) && (
+            <div className="flex gap-4 flex-wrap">
               {project.demo && (
                 <a
                   href={project.demo}
@@ -112,6 +112,19 @@ const ProjectDetail = ({ project, onClose }) => {
                   className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-green-600 transition-all font-semibold inline-flex items-center gap-2"
                 >
                   View Live Demo
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              )}
+              {project.apiDocs && (
+                <a
+                  href={project.apiDocs}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-500 transition-all font-semibold inline-flex items-center gap-2"
+                >
+                  API Docs
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>

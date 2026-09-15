@@ -14,6 +14,26 @@ const Projects = () => {
 
   const allProjects = [
     {
+      title: 'StockPilot - Inventory & POS SaaS',
+      year: '2026',
+      category: 'web',
+      azureDeployed: true,
+      description: 'Modern full-stack Point of Sale and Inventory Management SaaS with multi-tenant support, barcode checkout, financial reports, and Gemini AI insights — live on Azure.',
+      fullDescription: 'StockPilot is a production-deployed multi-tenant SaaS for inventory management and point of sale. Businesses manage products, stock movements, suppliers/customers, sales invoices and expenses with role-based access. The FastAPI backend (PostgreSQL 15, SQLAlchemy, Alembic, JWT) serves a Next.js 14 TypeScript frontend with fast POS checkout, revenue/expense and profit-loss reporting, and Gemini-powered business insights. Deployed with Docker containers via Azure Container Registry to Azure App Service with GitHub Actions CI/CD and Azure Database for PostgreSQL Flexible Server.',
+      technologies: ['FastAPI', 'Python', 'PostgreSQL 15', 'SQLAlchemy', 'Alembic', 'JWT', 'Next.js 14', 'TypeScript', 'Tailwind CSS', 'React Query', 'Docker', 'Azure App Service', 'Azure Container Registry', 'GitHub Actions'],
+      highlights: [
+        'Multi-tenant SaaS with role-based access for multiple businesses',
+        'Inventory management: products, stock levels, and movement tracking',
+        'Fast POS checkout with barcode scanning support and sales invoicing',
+        'Financial reports: revenue tracking, expense management, profit/loss analysis plus Gemini AI insights',
+        'Live in production: Docker CI/CD via GitHub Actions → Azure Container Registry → Azure App Service',
+      ],
+      github: null,
+      demo: 'https://stockpilot-web.azurewebsites.net',
+      apiDocs: 'https://stockpilot-api.azurewebsites.net/docs',
+      backend: 'https://stockpilot-api.azurewebsites.net',
+    },
+    {
       title: 'DataSense AI',
       year: '2026',
       category: 'ai-ml',
@@ -33,6 +53,7 @@ const Projects = () => {
       title: 'Complaint Management System',
       year: '2026',
       category: 'web',
+      azureDeployed: true,
       description: 'Full-stack web application for reporting and managing public complaints with media upload support across various categories (road, electricity, water, garbage, public safety).',
       fullDescription: 'A comprehensive complaint management platform enabling citizens to report public issues with image/video proof. Built with React, FastAPI, and PostgreSQL, featuring automated CI/CD deployment to Azure. Includes media processing, complaint tracking, dashboard statistics, and RESTful API with comprehensive documentation.',
       technologies: ['React 18', 'TypeScript', 'FastAPI', 'Python', 'PostgreSQL', 'SQLAlchemy', 'Tailwind CSS', 'Docker', 'Azure App Service', 'GitHub Actions', 'Nginx', 'Vite'],
@@ -201,9 +222,11 @@ const Projects = () => {
     },
   ];
 
-  const filteredProjects = activeCategory === 'all' 
-    ? allProjects 
-    : allProjects.filter(project => project.category === activeCategory);
+  const azureProjects = allProjects.filter(project => project.azureDeployed);
+
+  const filteredProjects = (activeCategory === 'all'
+    ? allProjects.filter(project => !project.azureDeployed)
+    : allProjects.filter(project => project.category === activeCategory && !project.azureDeployed));
 
   const projectCounts = {
     all: allProjects.length,
@@ -218,7 +241,79 @@ const Projects = () => {
         <h2 className="text-3xl font-heading font-bold text-white mb-2">Featured Projects</h2>
         <p className="text-slate-400 mb-4 text-sm">A showcase of my technical expertise and problem-solving abilities</p>
 
-        {/* Category Filter */}
+        {/* Azure Deployed Live */}
+        <div className="mb-10">
+          <div className="flex items-center gap-3 mb-1">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            </span>
+            <h3 className="text-xl font-heading font-bold text-white">Azure Deployed — Live</h3>
+          </div>
+          <p className="text-slate-400 mb-5 text-sm">Production apps live on Microsoft Azure</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {azureProjects.map((project, index) => (
+              <div
+                key={'azure-' + index}
+                className="bg-card rounded-xl border-2 border-emerald-500/40 hover:border-emerald-400 transition-all overflow-hidden cursor-pointer hover:shadow-lg hover:shadow-emerald-500/10"
+                onClick={() => setSelectedProject(project)}
+              >
+                <div className="h-1 bg-gradient-to-r from-emerald-400 via-sky-400 to-blue-500"></div>
+                <div className="p-5">
+                  <div className="flex justify-between items-start mb-3">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-semibold text-accent uppercase tracking-wider">
+                        {project.category === 'ai-ml' ? 'AI/ML' : project.category === 'mobile' ? 'Mobile' : 'Web'}
+                      </span>
+                      <span className="text-[10px] font-bold text-white bg-emerald-500 px-2 py-0.5 rounded-full uppercase tracking-wider">Azure Live</span>
+                    </div>
+                    <span className="bg-dark text-slate-400 px-2 py-1 rounded text-xs font-medium">{project.year}</span>
+                  </div>
+                  <h3 className="text-lg font-heading font-bold text-white mb-2">{project.title}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed mb-4 line-clamp-3">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.slice(0, 4).map((tech, idx) => (
+                      <span key={idx} className="bg-dark text-slate-400 text-xs px-2.5 py-1 rounded border border-slate-700">{tech}</span>
+                    ))}
+                    {project.technologies.length > 4 && (
+                      <span className="bg-dark text-slate-400 text-xs px-2.5 py-1 rounded border border-slate-700">+{project.technologies.length - 4}</span>
+                    )}
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <button className="text-primary hover:text-blue-400 font-semibold text-sm transition-colors inline-flex items-center gap-1">
+                      View Case Study
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                    <div className="flex gap-3">
+                      {project.demo && (
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-xs font-medium text-accent hover:text-green-400 transition-colors inline-flex items-center gap-1" title="Live Demo">
+                          Live Demo
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      )}
+                      {project.github && (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-xs font-medium text-slate-400 hover:text-primary transition-colors inline-flex items-center gap-1" title="GitHub">
+                          GitHub
+                          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                          </svg>
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <h3 className="text-xl font-heading font-bold text-white mb-1">All Projects</h3>
+        <p className="text-slate-400 mb-4 text-sm">Browse the full portfolio by category</p>
+
         <div className="flex flex-wrap gap-3 mb-6">
           {categories.map((category) => (
             <button
